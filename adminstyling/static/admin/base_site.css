@@ -1,0 +1,36 @@
+div#content.flex h1 {
+    color: #544433;
+    padding: 5px;
+    # background-color: #988877;
+    background-color: #FFFFFF;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+body {
+    background-color: #544433;
+}
+
+div#header {
+    background-color: #544433;
+}
+
+h1#site-name {
+   color: #FFFFFF;
+}
+
+tr:hover {
+    background-color: #EEFFFF;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background: url("../img/default-bg.gif") repeat-x scroll left top #544433;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0;
+    padding: 2px 5px 3px;
+    text-align: left;
+}
+

@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Post Submission</title>
+  </head>
+
+  <body>
+    <div id="mainContent">
+    <form method="post" id="postSubmissionForm" action="/post/new/submit/">
+      <h1>New Post</h1>
+      {% csrf_token %}
+      {% for field in newPostForm %}
+        <div class="errorMessage">{{ field.errors }}</div>
+        <div class="inputLabel">{{ field.label }}: </div>{{ field }}
+      {% endfor %}
+      <input type="submit" value="Submit"/>
+    </form>
+    </div>
+  </body>
+
+  <link rel="stylesheet" href="/static/css/newPost.css" type="text/css"/>
+</html>
+
+

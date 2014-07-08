@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="content">
+  <div id="menu">
+    <table id="menuTable">
+      <tr>
+	<td><a href="/post/new/">New post</a></td>
+	<td><a href="/post/stats/">Stats</a></td>
+      </tr>
+</ul>
+</table>
+</div>
+
+<div id="mainContent">
+  {% if posts %}
+  <table>
+    <caption>Latest Posts</caption>
+    {% for post in posts %}
+    <tr><td><a href="/post/{{ post.id }}/">{{ post.heading }}</a>
+	<p>{{ post.description }}</p></td><td id="numbering">{{ post.id }} </td></tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <p>No posts available.</p>
+  {% endif %}
+
+  <div id="paginationCurrent">
+    {% if posts.number > 1 %}
+    <a href="posts?page={{ posts.previous_page_number }}">&#x00AB </a>
+    {% else %}
+    <p class="grayedOut">&#x00AB</p>
+    {% endif %}
+    <p class="control">{{ posts.number }} | {{ posts.paginator.num_pages }}</p>
+    {% if posts.number <= posts.paginator.num_pages|add:"-1" %}
+			  <a href="posts?page={{ posts.next_page_number }}"> &#x00BB</a>
+			  {% else %}
+    <p class="grayedOut">&#x00BB</p>
+    {% endif %}
+  </div>
+</div>
+</div>
+
+<link rel="stylesheet" href="/static/css/index.css"text/css"/>
+{% endblock content %}
+
+

@@ -1,0 +1,70 @@
+h1 {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+div#mainContent {
+    width: 640px;
+    margin: auto;
+    background-color: #AFAFAF;
+    padding: 10px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    border: 2px solid #9E9E9E;
+}
+
+input {
+    border: none;
+}
+
+input[type=submit] {
+    color: #FFFFFF;
+    background-color: #787878;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #FF0000;
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+input[type=submit]:hover {
+    background-color: #FFFFFF;
+    color: #FF0000;
+    cursor: pointer;
+}
+
+select {
+    border: none;
+    background-color: #FFFFFF;
+}
+
+input[type=text] {
+    width: 640px;
+}
+
+.inputLabel {
+    border-top: 1px solid #787878;
+    padding-top: 5px;
+}
+
+textarea {
+    width: 640px;
+    border: none;
+}
+
+.errorlist li {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    padding: 3px;
+    display: inline;
+    border-radius: 2.5px;
+    font-family: Helvetica;
+    list-style: none;
+    display: none;
+}
+
+.errorlist li:before {
+    content: "\25B8 \0020";
+}
+

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a id="backButton" href="/posts?page=1">&#x25C2</a>
+<div id="mainContent">
+  {% if post %}
+    <table>
+      <tr>
+	<td id="publisher">{{ post.publisher }}</td>
+	<td id="date">{{ post.date }}</td>
+      </tr>
+    </table>
+
+    <div id="textBlock" class="">
+      <h1>{{ post.heading }}</h1>
+      <p id="description">{{ post.description }}</p>
+      <p id="text">{{ post.text|safe }}</p>
+    </div>
+  {% else %}
+    <p class="errorMessage">No post available.</p>
+  {% endif %}
+  </div>
+
+<link rel="stylesheet" href="/static/css/post.css" type="text/css" media="screen" />
+
+{% endblock content %}
+
